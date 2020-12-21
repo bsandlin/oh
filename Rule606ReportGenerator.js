@@ -772,7 +772,7 @@ function getVenuesByMonth(month, year, securityType) { /* a1 */
 							$.each(venueChildNodes,
 									function (index,elt) {
 								if (elt.tagName == tag) {
-									nodeVal = getNodeValue(elt);
+									nodeVal = getNodeValue(elt, tag === 'materialAspects');
 									if (tag != 'materialAspects') {
 										row.push({
 											text: ((nodeVal==NS)?WS:nodeVal),
